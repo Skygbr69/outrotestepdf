@@ -1,0 +1,1166 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bible Goods Christian - Atividades Cristãs para Crianças</title>
+    
+    <!-- Google Fonts - Kid-friendly Typography -->
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&family=Fredoka:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        /* ========================================
+           GLOBAL STYLES & RESET
+        ======================================== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        :root {
+            /* Neutral Base Colors */
+            --bg-cream: #FFF9F0;
+            --bg-white: #FFFFFF;
+            --text-dark: #4A4A4A;
+            --text-gray: #6B6B6B;
+            
+            /* Soft Pastel Accents */
+            --baby-blue: #A8D8EA;
+            --peach: #FFB6A3;
+            --mint-green: #B8E6D5;
+            --lavender: #D5AAFF;
+            --light-yellow: #FFF4A3;
+            --honey-yellow: #FFD966;
+            --light-orange: #FFB366;
+            
+            /* CTA Colors */
+            --green-cta: #5FBB97;
+            --green-cta-hover: #4DA47E;
+            --orange-cta: #FF9B5E;
+            --orange-cta-hover: #FF8542;
+            
+            /* Typography */
+            --font-primary: 'Quicksand', sans-serif;
+            --font-heading: 'Fredoka', sans-serif;
+        }
+        
+        body {
+            font-family: var(--font-primary);
+            background: linear-gradient(135deg, var(--bg-cream) 0%, #FFE8D6 100%);
+            color: var(--text-dark);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        
+        /* ========================================
+           CONTAINER & LAYOUT
+        ======================================== */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        section {
+            padding: 60px 20px;
+        }
+        
+        /* ========================================
+           HERO SECTION
+        ======================================== */
+        .hero {
+            text-align: center;
+            padding: 80px 20px 60px;
+            background: linear-gradient(180deg, var(--bg-white) 0%, var(--bg-cream) 100%);
+            border-radius: 0 0 50px 50px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+        }
+        
+        .hero-logo {
+            max-width: 300px;
+            margin: 0 auto 30px;
+            animation: fadeInDown 1s ease-out;
+        }
+        
+        .hero-logo img {
+            width: 100%;
+            height: auto;
+            filter: drop-shadow(3px 3px 8px rgba(0, 0, 0, 0.1));
+        }
+        
+        .hero-image {
+            max-width: 400px;
+            margin: 40px auto;
+            animation: fadeInUp 1s ease-out 0.3s both;
+        }
+        
+        .hero-image img {
+            width: 100%;
+            height: auto;
+            filter: drop-shadow(5px 5px 15px rgba(0, 0, 0, 0.15));
+        }
+        
+        .hero h1 {
+            font-family: var(--font-heading);
+            font-size: 2.5rem;
+            color: var(--text-dark);
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.05);
+            animation: fadeIn 1s ease-out 0.5s both;
+        }
+        
+        .hero p {
+            font-size: 1.3rem;
+            color: var(--text-gray);
+            max-width: 700px;
+            margin: 0 auto 30px;
+            animation: fadeIn 1s ease-out 0.7s both;
+        }
+        
+        /* ========================================
+           BENEFITS SECTION
+        ======================================== */
+        .benefits {
+            background: var(--bg-white);
+            border-radius: 40px;
+            margin: 40px auto;
+            max-width: 1000px;
+            padding: 50px 30px;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .benefits h2 {
+            font-family: var(--font-heading);
+            font-size: 2.2rem;
+            text-align: center;
+            margin-bottom: 40px;
+            color: var(--text-dark);
+        }
+        
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+        
+        .benefit-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+            padding: 20px;
+            border-radius: 20px;
+            background: linear-gradient(135deg, var(--bg-cream) 0%, var(--bg-white) 100%);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .benefit-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+        }
+        
+        .benefit-icon {
+            font-size: 2rem;
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            flex-shrink: 0;
+        }
+        
+        .benefit-icon.blue { background: var(--baby-blue); color: #3A8BA8; }
+        .benefit-icon.peach { background: var(--peach); color: #D6705A; }
+        .benefit-icon.mint { background: var(--mint-green); color: #4A9B7B; }
+        .benefit-icon.lavender { background: var(--lavender); color: #8B5FC9; }
+        .benefit-icon.yellow { background: var(--light-yellow); color: #C9A626; }
+        
+        .benefit-text h3 {
+            font-family: var(--font-heading);
+            font-size: 1.2rem;
+            margin-bottom: 8px;
+            color: var(--text-dark);
+        }
+        
+        .benefit-text p {
+            font-size: 0.95rem;
+            color: var(--text-gray);
+        }
+        
+        /* ========================================
+           PRICING SECTION
+        ======================================== */
+        .pricing {
+            padding: 80px 20px;
+            background: transparent;
+        }
+        
+        .pricing h2 {
+            font-family: var(--font-heading);
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 60px;
+            color: var(--text-dark);
+        }
+        
+        .pricing-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 40px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .pricing-card {
+            background: var(--bg-white);
+            border-radius: 30px;
+            padding: 40px 30px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.12);
+            position: relative;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .pricing-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 50px rgba(0, 0, 0, 0.18);
+        }
+        
+        /* Premium Card - Pulse Animation */
+        .pricing-card.premium {
+            border: 3px solid var(--orange-cta);
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% {
+                box-shadow: 0 10px 40px rgba(255, 155, 94, 0.3);
+                transform: scale(1);
+            }
+            50% {
+                box-shadow: 0 15px 60px rgba(255, 155, 94, 0.5);
+                transform: scale(1.02);
+            }
+        }
+        
+        .card-badge {
+            position: absolute;
+            top: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: linear-gradient(135deg, var(--orange-cta), var(--honey-yellow));
+            color: white;
+            padding: 8px 25px;
+            border-radius: 20px;
+            font-family: var(--font-heading);
+            font-weight: 700;
+            font-size: 0.9rem;
+            box-shadow: 0 4px 15px rgba(255, 155, 94, 0.4);
+            text-transform: uppercase;
+        }
+        
+        .card-header h3 {
+            font-family: var(--font-heading);
+            font-size: 2rem;
+            margin-bottom: 10px;
+            color: var(--text-dark);
+        }
+        
+        .card-header p {
+            color: var(--text-gray);
+            margin-bottom: 20px;
+        }
+        
+        .price-container {
+            text-align: center;
+            margin: 30px 0;
+            padding: 20px;
+            background: linear-gradient(135deg, var(--bg-cream), #FFE8D6);
+            border-radius: 20px;
+        }
+        
+        .old-price {
+            text-decoration: line-through;
+            color: #999;
+            font-size: 1.3rem;
+            margin-bottom: 5px;
+        }
+        
+        .new-price {
+            font-family: var(--font-heading);
+            font-size: 3.5rem;
+            color: var(--text-dark);
+            font-weight: 700;
+            line-height: 1;
+        }
+        
+        .new-price .currency {
+            font-size: 1.8rem;
+            vertical-align: super;
+        }
+        
+        .discount-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, #FF5757, #FF8E53);
+            color: white;
+            padding: 5px 15px;
+            border-radius: 15px;
+            font-weight: 700;
+            font-size: 1rem;
+            margin-top: 10px;
+        }
+        
+        .features-list {
+            list-style: none;
+            margin: 30px 0;
+        }
+        
+        .features-list li {
+            padding: 12px 0;
+            border-bottom: 1px solid #f0f0f0;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        
+        .features-list li:last-child {
+            border-bottom: none;
+        }
+        
+        .features-list i {
+            font-size: 1.2rem;
+            width: 25px;
+        }
+        
+        .features-list .basic i { color: var(--green-cta); }
+        .features-list .premium i { color: var(--orange-cta); }
+        
+        .bonus-item {
+            background: linear-gradient(135deg, var(--light-yellow), var(--honey-yellow));
+            padding: 10px 15px;
+            border-radius: 15px;
+            margin-top: 10px;
+            font-weight: 600;
+        }
+        
+        .social-proof {
+            text-align: center;
+            margin: 20px 0;
+            padding: 15px;
+            background: linear-gradient(135deg, var(--peach), var(--light-orange));
+            border-radius: 15px;
+            color: white;
+            font-weight: 600;
+            font-size: 0.95rem;
+        }
+        
+        .cta-button {
+            display: block;
+            width: 100%;
+            padding: 18px 30px;
+            border: none;
+            border-radius: 50px;
+            font-family: var(--font-heading);
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: white;
+            cursor: pointer;
+            text-decoration: none;
+            text-align: center;
+            transition: all 0.3s ease;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+            margin-top: 20px;
+        }
+        
+        .cta-button.green {
+            background: linear-gradient(135deg, var(--green-cta), #4DA47E);
+        }
+        
+        .cta-button.green:hover {
+            background: linear-gradient(135deg, var(--green-cta-hover), #3A8566);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(95, 187, 151, 0.4);
+        }
+        
+        .cta-button.orange {
+            background: linear-gradient(135deg, var(--orange-cta), var(--honey-yellow));
+        }
+        
+        .cta-button.orange:hover {
+            background: linear-gradient(135deg, var(--orange-cta-hover), #FFB84D);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(255, 155, 94, 0.5);
+        }
+        
+        /* ========================================
+           INSPIRATIONAL SECTION
+        ======================================== */
+        .inspirational {
+            text-align: center;
+            padding: 80px 20px;
+            background: linear-gradient(180deg, var(--baby-blue) 0%, var(--mint-green) 100%);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .inspirational::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 1px, transparent 1px);
+            background-size: 50px 50px;
+            animation: sparkle 20s linear infinite;
+        }
+        
+        @keyframes sparkle {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        .inspirational-content {
+            position: relative;
+            z-index: 1;
+        }
+        
+        .inspirational h2 {
+            font-family: var(--font-heading);
+            font-size: 2.5rem;
+            color: white;
+            margin-bottom: 20px;
+            text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.2);
+        }
+        
+        .inspirational p {
+            font-size: 1.3rem;
+            color: white;
+            max-width: 700px;
+            margin: 0 auto 40px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.15);
+            line-height: 1.8;
+        }
+        
+        .inspirational-image {
+            max-width: 800px;
+            margin: 0 auto;
+            border-radius: 30px;
+            overflow: hidden;
+            box-shadow: 0 15px 50px rgba(0, 0, 0, 0.3);
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0px);
+            }
+            50% {
+                transform: translateY(-20px);
+            }
+        }
+        
+        .inspirational-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        /* Accessibility: Reduce motion for users who prefer it */
+        @media (prefers-reduced-motion: reduce) {
+            .inspirational::before {
+                animation: none;
+            }
+            
+            .inspirational-image {
+                animation: none;
+            }
+            
+            .pricing-card.premium {
+                animation: none;
+            }
+            
+            * {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+        }
+        
+        /* ========================================
+           FAQ SECTION
+        ======================================== */
+        .faq {
+            background: var(--bg-white);
+            border-radius: 40px;
+            max-width: 900px;
+            margin: 60px auto;
+            padding: 50px 30px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+        }
+        
+        .faq h2 {
+            font-family: var(--font-heading);
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 40px;
+            color: var(--text-dark);
+        }
+        
+        .faq-item {
+            border-bottom: 2px solid var(--baby-blue);
+            margin-bottom: 15px;
+            border-radius: 15px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+        
+        .faq-item:nth-child(odd) {
+            border-bottom-color: var(--peach);
+        }
+        
+        .faq-item:nth-child(3n) {
+            border-bottom-color: var(--mint-green);
+        }
+        
+        .faq-question {
+            padding: 20px 25px;
+            background: linear-gradient(135deg, var(--bg-cream), var(--bg-white));
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: all 0.3s ease;
+            border-radius: 15px;
+        }
+        
+        .faq-question:hover {
+            background: linear-gradient(135deg, var(--baby-blue), var(--mint-green));
+            color: white;
+        }
+        
+        .faq-question h3 {
+            font-family: var(--font-heading);
+            font-size: 1.2rem;
+            font-weight: 600;
+            flex: 1;
+        }
+        
+        .faq-icon {
+            font-size: 1.5rem;
+            transition: transform 0.3s ease;
+        }
+        
+        .faq-item.active .faq-icon {
+            transform: rotate(180deg);
+        }
+        
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease, padding 0.4s ease;
+            padding: 0 25px;
+            background: var(--bg-white);
+        }
+        
+        .faq-item.active .faq-answer {
+            max-height: 500px;
+            padding: 20px 25px;
+        }
+        
+        .faq-answer p {
+            color: var(--text-gray);
+            line-height: 1.8;
+        }
+        
+        /* ========================================
+           FINAL CTA SECTION
+        ======================================== */
+        .final-cta {
+            text-align: center;
+            padding: 60px 20px;
+        }
+        
+        .final-cta h2 {
+            font-family: var(--font-heading);
+            font-size: 2rem;
+            margin-bottom: 30px;
+            color: var(--text-dark);
+        }
+        
+        .final-cta-button {
+            display: inline-block;
+            padding: 20px 50px;
+            background: linear-gradient(135deg, var(--lavender), var(--baby-blue));
+            color: white;
+            font-family: var(--font-heading);
+            font-size: 1.5rem;
+            font-weight: 700;
+            border-radius: 50px;
+            text-decoration: none;
+            box-shadow: 0 8px 30px rgba(168, 216, 234, 0.4);
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border: none;
+        }
+        
+        .final-cta-button:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 40px rgba(168, 216, 234, 0.6);
+            background: linear-gradient(135deg, #C99BF0, #88C5E0);
+        }
+        
+        /* ========================================
+           GUARANTEE SECTION
+        ======================================== */
+        .guarantee {
+            background: linear-gradient(135deg, var(--mint-green), var(--baby-blue));
+            padding: 50px 30px;
+            border-radius: 40px;
+            max-width: 900px;
+            margin: 60px auto;
+            text-align: center;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.12);
+        }
+        
+        .guarantee h2 {
+            font-family: var(--font-heading);
+            font-size: 2.2rem;
+            color: white;
+            margin-bottom: 30px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        
+        .guarantee-badges {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+        
+        .badge-item {
+            background: white;
+            padding: 25px;
+            border-radius: 20px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            min-width: 150px;
+            transition: transform 0.3s ease;
+        }
+        
+        .badge-item:hover {
+            transform: scale(1.05);
+        }
+        
+        .badge-item i {
+            font-size: 3rem;
+            margin-bottom: 15px;
+        }
+        
+        .badge-item.safe i { color: var(--green-cta); }
+        .badge-item.guarantee i { color: var(--orange-cta); }
+        .badge-item.support i { color: var(--lavender); }
+        
+        .badge-item p {
+            font-weight: 600;
+            color: var(--text-dark);
+            font-size: 0.95rem;
+        }
+        
+        .guarantee-text {
+            color: white;
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin: 0 auto;
+            line-height: 1.8;
+        }
+        
+        /* ========================================
+           FOOTER
+        ======================================== */
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            background: var(--bg-white);
+            color: var(--text-gray);
+            font-size: 0.9rem;
+        }
+        
+        footer p {
+            margin: 5px 0;
+        }
+        
+        /* ========================================
+           ANIMATIONS
+        ======================================== */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        /* ========================================
+           RESPONSIVE DESIGN
+        ======================================== */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .hero p {
+                font-size: 1.1rem;
+            }
+            
+            .pricing h2,
+            .faq h2,
+            .inspirational h2 {
+                font-size: 2rem;
+            }
+            
+            .inspirational p {
+                font-size: 1.1rem;
+            }
+            
+            .inspirational {
+                padding: 60px 20px;
+            }
+            
+            .pricing-cards {
+                grid-template-columns: 1fr;
+            }
+            
+            .new-price {
+                font-size: 3rem;
+            }
+            
+            .benefits-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .guarantee-badges {
+                flex-direction: column;
+            }
+            
+            section {
+                padding: 40px 15px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 1.7rem;
+            }
+            
+            .inspirational h2 {
+                font-size: 1.7rem;
+            }
+            
+            .inspirational p {
+                font-size: 1rem;
+            }
+            
+            .cta-button {
+                font-size: 1.1rem;
+                padding: 15px 25px;
+            }
+            
+            .final-cta-button {
+                font-size: 1.2rem;
+                padding: 18px 35px;
+            }
+        }
+    </style>
+</head>
+<body>
+    
+    <!-- ========================================
+         HERO SECTION
+    ======================================== -->
+    <section class="hero">
+        <div class="hero-logo">
+            <img src="attached_assets/imgi_1_bible-goods-colorindo-com-a-biblia-atividades-para-colorir-pintar-bobbies-goods-pdf-imprimir-logotipo_1763166817134.png" alt="Bible Goods Logo">
+        </div>
+        
+        <h1>Atividades Cristãs Divertidas para Suas Crianças!</h1>
+        <p>Ensine valores bíblicos de forma lúdica e colorida com nossos materiais exclusivos para colorir e aprender.</p>
+        
+        <div class="hero-image">
+            <img src="attached_assets/imgi_24_bible-goods-colorindo-com-a-biblia-atividades-para-colorir-pintar-bobbies-goods-pdf-imprimir-mao-jesus_1763166813195.png" alt="Jesus com Criança">
+        </div>
+    </section>
+    
+    <!-- ========================================
+         BENEFITS SECTION
+    ======================================== -->
+    <section class="benefits">
+        <h2>Por Que Escolher Bible Goods?</h2>
+        <div class="benefits-grid">
+            <div class="benefit-item">
+                <div class="benefit-icon blue">
+                    <i class="fas fa-heart"></i>
+                </div>
+                <div class="benefit-text">
+                    <h3>Amor por Jesus</h3>
+                    <p>Atividades que ensinam o amor de Cristo de forma divertida e apropriada para crianças.</p>
+                </div>
+            </div>
+            
+            <div class="benefit-item">
+                <div class="benefit-icon peach">
+                    <i class="fas fa-palette"></i>
+                </div>
+                <div class="benefit-text">
+                    <h3>Criatividade</h3>
+                    <p>Desenvolvem habilidades motoras e criatividade enquanto aprendem histórias bíblicas.</p>
+                </div>
+            </div>
+            
+            <div class="benefit-item">
+                <div class="benefit-icon mint">
+                    <i class="fas fa-book-bible"></i>
+                </div>
+                <div class="benefit-text">
+                    <h3>Conteúdo Bíblico</h3>
+                    <p>Baseado em passagens autênticas da Bíblia, adaptadas para o entendimento infantil.</p>
+                </div>
+            </div>
+            
+            <div class="benefit-item">
+                <div class="benefit-icon lavender">
+                    <i class="fas fa-print"></i>
+                </div>
+                <div class="benefit-text">
+                    <h3>Fácil de Usar</h3>
+                    <p>Arquivos PDF prontos para imprimir e usar imediatamente em casa ou na igreja.</p>
+                </div>
+            </div>
+            
+            <div class="benefit-item">
+                <div class="benefit-icon yellow">
+                    <i class="fas fa-users"></i>
+                </div>
+                <div class="benefit-text">
+                    <h3>Família Unida</h3>
+                    <p>Momentos especiais em família enquanto aprendem juntos sobre a Palavra de Deus.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- ========================================
+         INSPIRATIONAL SECTION
+    ======================================== -->
+    <section class="inspirational">
+        <div class="inspirational-content">
+            <h2>Jesus Ama as Crianças!</h2>
+            <p>"Deixem vir a mim as crianças e não as impeçam, pois o Reino de Deus pertence aos que são semelhantes a elas." - Lucas 18:16</p>
+            
+            <div class="inspirational-image">
+                <img src="attached_assets/imgi_30_bible-goods-colorindo-com-a-biblia-atividades-para-colorir-pintar-bobbies-goods-pdf-imprimir-logotipo-jesus-3_1763171689389.jpg" alt="Jesus com Crianças Felizes">
+            </div>
+        </div>
+    </section>
+    
+    <!-- ========================================
+         PRICING SECTION
+    ======================================== -->
+    <section class="pricing" id="pricing">
+        <h2>Escolha Seu Pacote Hoje!</h2>
+        
+        <div class="pricing-cards">
+            <!-- BASIC PACKAGE -->
+            <div class="pricing-card basic">
+                <div class="card-header">
+                    <h3>Pacote Básico</h3>
+                    <p>Perfeito para começar a ensinar seus filhos</p>
+                </div>
+                
+                <div class="price-container">
+                    <div class="old-price">De R$ 47</div>
+                    <div class="new-price">
+                        <span class="currency">R$</span>10
+                    </div>
+                    <div class="discount-badge">-79% OFF</div>
+                </div>
+                
+                <ul class="features-list basic">
+                    <li><i class="fas fa-check-circle"></i> 50+ páginas para colorir</li>
+                    <li><i class="fas fa-check-circle"></i> Histórias bíblicas ilustradas</li>
+                    <li><i class="fas fa-check-circle"></i> Atividades educativas</li>
+                    <li><i class="fas fa-check-circle"></i> Personagens bíblicos</li>
+                    <li><i class="fas fa-check-circle"></i> Versículos para memorizar</li>
+                    <li><i class="fas fa-check-circle"></i> Formato PDF para imprimir</li>
+                    <li><i class="fas fa-check-circle"></i> Acesso imediato</li>
+                </ul>
+                
+                <!-- 
+                    ⚠️ REPLACE THE HREF BELOW WITH YOUR PAYMENT GATEWAY URL
+                    Example: https://pay.hotmart.com/YOUR_PRODUCT_ID
+                -->
+                <a href="#REPLACE-WITH-BASIC-PACKAGE-PAYMENT-URL" class="cta-button green">
+                    Quero o Pacote Básico
+                </a>
+            </div>
+            
+            <!-- PREMIUM PACKAGE (MOST POPULAR) -->
+            <div class="pricing-card premium">
+                <div class="card-badge">MAIS POPULAR</div>
+                
+                <div class="card-header">
+                    <h3>Pacote Premium</h3>
+                    <p>A escolha preferida das famílias!</p>
+                </div>
+                
+                <div class="price-container">
+                    <div class="old-price">De R$ 256</div>
+                    <div class="new-price">
+                        <span class="currency">R$</span>17
+                    </div>
+                    <div class="discount-badge">-93% OFF</div>
+                </div>
+                
+                <ul class="features-list premium">
+                    <li><i class="fas fa-check-circle"></i> <strong>Tudo do Pacote Básico</strong></li>
+                    <li><i class="fas fa-check-circle"></i> 150+ páginas para colorir</li>
+                    <li><i class="fas fa-check-circle"></i> Atividades avançadas</li>
+                    <li><i class="fas fa-check-circle"></i> Jogos bíblicos interativos</li>
+                    <li><i class="fas fa-check-circle"></i> Certificados para crianças</li>
+                </ul>
+                
+                <div class="bonus-item">
+                    <i class="fas fa-gift"></i> <strong>BÔNUS 1:</strong> Calendário Bíblico Infantil
+                </div>
+                <div class="bonus-item">
+                    <i class="fas fa-gift"></i> <strong>BÔNUS 2:</strong> Marcadores de Página Cristãos
+                </div>
+                <div class="bonus-item">
+                    <i class="fas fa-gift"></i> <strong>BÔNUS 3:</strong> Guia para Pais e Educadores
+                </div>
+                
+                <div class="social-proof">
+                    <i class="fas fa-users"></i> +500 pessoas já escolheram este pacote!
+                </div>
+                
+                <!-- 
+                    ⚠️ REPLACE THE HREF BELOW WITH YOUR PAYMENT GATEWAY URL
+                    Example: https://pay.hotmart.com/YOUR_PREMIUM_PRODUCT_ID
+                -->
+                <a href="#REPLACE-WITH-PREMIUM-PACKAGE-PAYMENT-URL" class="cta-button orange">
+                    Quero o Pacote Premium
+                </a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- ========================================
+         FAQ SECTION
+    ======================================== -->
+    <section class="faq">
+        <h2>Perguntas Frequentes</h2>
+        
+        <div class="faq-item">
+            <div class="faq-question">
+                <h3>Como recebo os materiais após a compra?</h3>
+                <i class="fas fa-chevron-down faq-icon"></i>
+            </div>
+            <div class="faq-answer">
+                <p>Assim que o pagamento for confirmado, você receberá um e-mail com o link para download imediato dos arquivos PDF. Todo o processo é automático e seguro!</p>
+            </div>
+        </div>
+        
+        <div class="faq-item">
+            <div class="faq-question">
+                <h3>Posso imprimir quantas vezes quiser?</h3>
+                <i class="fas fa-chevron-down faq-icon"></i>
+            </div>
+            <div class="faq-answer">
+                <p>Sim! Você pode imprimir as atividades quantas vezes precisar para uso pessoal, familiar ou em sua igreja/escola dominical.</p>
+            </div>
+        </div>
+        
+        <div class="faq-item">
+            <div class="faq-question">
+                <h3>Para qual faixa etária são as atividades?</h3>
+                <i class="fas fa-chevron-down faq-icon"></i>
+            </div>
+            <div class="faq-answer">
+                <p>Nossos materiais são ideais para crianças de 3 a 12 anos, com diferentes níveis de dificuldade para atender todas as idades.</p>
+            </div>
+        </div>
+        
+        <div class="faq-item">
+            <div class="faq-question">
+                <h3>Qual a diferença entre o Básico e o Premium?</h3>
+                <i class="fas fa-chevron-down faq-icon"></i>
+            </div>
+            <div class="faq-answer">
+                <p>O Pacote Premium inclui 3x mais conteúdo, atividades avançadas, jogos interativos e bônus exclusivos como calendário bíblico e guia para pais.</p>
+            </div>
+        </div>
+        
+        <div class="faq-item">
+            <div class="faq-question">
+                <h3>Há garantia de devolução do dinheiro?</h3>
+                <i class="fas fa-chevron-down faq-icon"></i>
+            </div>
+            <div class="faq-answer">
+                <p>Sim! Você tem 7 dias de garantia incondicional. Se não ficar satisfeito, devolvemos 100% do seu dinheiro, sem perguntas.</p>
+            </div>
+        </div>
+        
+        <div class="faq-item">
+            <div class="faq-question">
+                <h3>O pagamento é seguro?</h3>
+                <i class="fas fa-chevron-down faq-icon"></i>
+            </div>
+            <div class="faq-answer">
+                <p>Absolutamente! Utilizamos plataformas de pagamento certificadas e criptografadas. Seus dados estão 100% protegidos.</p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- ========================================
+         FINAL CTA SECTION
+    ======================================== -->
+    <section class="final-cta">
+        <h2>Tirou todas as suas dúvidas?</h2>
+        <button class="final-cta-button" id="scrollToPricing">
+            Esclareci minhas dúvidas, quero comprar!
+        </button>
+    </section>
+    
+    <!-- ========================================
+         GUARANTEE SECTION
+    ======================================== -->
+    <section class="guarantee">
+        <h2>Compra 100% Segura e Garantida</h2>
+        
+        <div class="guarantee-badges">
+            <div class="badge-item safe">
+                <i class="fas fa-shield-alt"></i>
+                <p>Pagamento<br>Seguro</p>
+            </div>
+            
+            <div class="badge-item guarantee">
+                <i class="fas fa-award"></i>
+                <p>Garantia de<br>7 Dias</p>
+            </div>
+            
+            <div class="badge-item support">
+                <i class="fas fa-headset"></i>
+                <p>Suporte<br>Dedicado</p>
+            </div>
+        </div>
+        
+        <div class="guarantee-text">
+            <p>Sua satisfação é nossa prioridade! Se por qualquer motivo você não ficar satisfeito com o material, devolvemos 100% do seu investimento em até 7 dias após a compra.</p>
+        </div>
+    </section>
+    
+    <!-- ========================================
+         FOOTER
+    ======================================== -->
+    <footer>
+        <p><strong>Bible Goods Christian</strong></p>
+        <p>Ensinando valores cristãos através da criatividade</p>
+        <p>&copy; 2025 Bible Goods. Todos os direitos reservados.</p>
+    </footer>
+    
+    <!-- ========================================
+         JAVASCRIPT
+    ======================================== -->
+    <script>
+        // ========================================
+        // FAQ ACCORDION FUNCTIONALITY
+        // ========================================
+        document.addEventListener('DOMContentLoaded', function() {
+            const faqItems = document.querySelectorAll('.faq-item');
+            
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                
+                question.addEventListener('click', () => {
+                    // Toggle active class
+                    const isActive = item.classList.contains('active');
+                    
+                    // Close all other items
+                    faqItems.forEach(otherItem => {
+                        otherItem.classList.remove('active');
+                    });
+                    
+                    // If this item wasn't active, open it
+                    if (!isActive) {
+                        item.classList.add('active');
+                    }
+                });
+            });
+            
+            // ========================================
+            // SCROLL TO PRICING FUNCTIONALITY
+            // ========================================
+            const scrollButton = document.getElementById('scrollToPricing');
+            
+            scrollButton.addEventListener('click', () => {
+                const pricingSection = document.getElementById('pricing');
+                
+                pricingSection.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            });
+            
+            // ========================================
+            // SMOOTH SCROLL FOR ALL ANCHOR LINKS
+            // ========================================
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    const href = this.getAttribute('href');
+                    
+                    // Only apply smooth scroll if it's an actual anchor (not a placeholder)
+                    if (href.length > 1 && !href.includes('REPLACE')) {
+                        e.preventDefault();
+                        const target = document.querySelector(href);
+                        
+                        if (target) {
+                            target.scrollIntoView({
+                                behavior: 'smooth',
+                                block: 'start'
+                            });
+                        }
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
